@@ -1,0 +1,9 @@
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    /* width: 200px; */
+    height: 60px;
+    background-color: blue;
+}

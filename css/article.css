@@ -1,0 +1,96 @@
+@media screen and (max-width: 500px) {
+    .main-l .new-l {
+        height: 100% !important;
+    }
+}
+
+.conter .main .main-l .new-l {
+    height: 100%;
+}
+
+.conter .main .main-l .new-l .actor span {
+    font-size: 16px;
+}
+
+.conter .main .main-l .new-l .actor {
+    margin-top: 10px;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    font-size: 15px;
+}
+
+.conter .main .main-l .new-l .actor p {
+    font-size: 15px;
+    /* float: left; */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.conter .main .main-l .new-l .content {
+    width: 100%;
+    height: 100%;
+}
+
+.conter .main .main-l .new-l div img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.conter .main .main-l .new-l div .img {
+    /* width: 33%; */
+    /* height: 100px; */
+    /* background-color: slateblue;
+    padding: 0 5px;
+    margin: 5px 0;
+    background-image: url(../uploads/wallpaper-2572384.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+}
+
+.conter .main .main-l .new-l .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.conter .main .main-l .new-l .content-m {
+    width: 100%;
+    margin-top: 30px !important;
+    /* background-color: blanchedalmond; */
+    padding: 0 5px;
+    height: 100%;
+    text-indent: 2em;
+    line-height: 2em;
+    padding: 0 20px;
+    color: #555;
+}
+
+.conter .main .main-l .new-l .conten-ok span {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+}
+
+.conter .main .main-l .new-l .conten-ok,
+.goback {
+    float: left;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+    background-color: rgb(226, 82, 58);
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.conter .main .main-l .new-l a:hover {
+    color: white;
+}
+
+.conter .main .main-l .new-l a {
+    display: block;
+    color: white;
+}
