@@ -42,8 +42,6 @@ body a {
     padding-left: 20px;
 }
 
-
-
 .logo {
     font-size: 25px;
     color: white;
@@ -91,9 +89,11 @@ body a {
     margin: 0;
     margin-left: 20px;
 }
-.header-main{
-    height: 100%;
+
+.header-main {
+    /* height: 100%; */
 }
+
 .main-list ul li a:hover {
     color: rgb(0, 132, 255);
 }
@@ -135,8 +135,9 @@ body a {
     text-align: center;
     line-height: 30px;
 }
-.r{
-    background-color:  rgb(0, 132, 255);
+
+.r {
+    background-color: rgb(0, 132, 255);
     ;
     float: right;
     width: 85%;
@@ -145,22 +146,29 @@ body a {
     /* margin-left: 10px; */
     padding-left: 20px;
 }
-.rheader{
+
+.rheader {
     width: 33.3%;
     height: 60px;
     background-color: aqua;
     float: left;
     line-height: 60px;
     color: rgb(0, 132, 255);
-    
 }
-.r-one{}
 
-.r-two{
+.r-one {}
+
+.r-two {
     font-size: 20px;
 }
-.r-three{
-    font-size: 16px;
-    
 
+.r-three {
+    font-size: 16px;
+}
+
+.echat {
+    width: 500px;
+    height: 500px;
+    background-color: #555;
+    margin-top: 60px;
 }
