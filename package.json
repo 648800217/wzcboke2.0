@@ -13,6 +13,7 @@
     "bootstrap": "^4.4.1",
     "echarts": "^4.6.0",
     "jquery": "^3.4.1",
-    "mui": "0.0.1"
+    "mui": "file:node_modules/mui",
+    "nprogress": "file:node_modules/nprogress"
   }
 }
