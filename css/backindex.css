@@ -17,7 +17,7 @@ body a {
 }
 
 .row {
-    background-color: brown;
+    /* background-color: brown; */
     width: 100%;
     display: block;
     /* width: 100%; */
@@ -33,13 +33,16 @@ body a {
 }
 
 .l {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+    ;
     float: left;
     width: 15%;
     padding: 10px;
     height: 100%;
     /* margin-left: 10px; */
     padding-left: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 3px;
 }
 
 .logo {
@@ -137,14 +140,15 @@ body a {
 }
 
 .r {
-    background-color: rgb(0, 132, 255);
-    ;
+    /* background-color: rgb(0, 132, 255); */
     float: right;
     width: 85%;
     padding: 10px;
     height: 100%;
     /* margin-left: 10px; */
     padding-left: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 3px;
 }
 
 .rheader {
@@ -167,8 +171,11 @@ body a {
 }
 
 .echat {
-    width: 500px;
-    height: 500px;
-    background-color: #555;
+    width: 800px;
+    height: 800px;
+    background-color: white;
     margin-top: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
 }
