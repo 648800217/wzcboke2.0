@@ -1,0 +1,120 @@
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(246, 249, 250);
+        }
+        
+        html,
+        body a {
+            display: block;
+        }
+        
+        .container-fluid {
+            height: 100%;
+        }
+        
+        .row {
+            height: 100%;
+            position: relative;
+        }
+        
+        .l {
+            box-shadow: -2px -5px 11px 9px;
+            /* height: 100%; */
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+        
+        .l-header {
+            font-size: 30px;
+            margin: 30px 0;
+        }
+        
+        .l-logo {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            border-radius: 50%;
+            margin-bottom: 50px !important;
+        }
+        
+        .l-mainlist ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .l-mainlist ul li {
+            list-style: none;
+        }
+        
+        .l-mainlist ul li a {
+            text-decoration: none;
+            padding: 40px;
+        }
+        
+        .logo-out {
+            width: 100px;
+            height: 40px;
+            margin: 22px;
+            margin-top: 66px;
+        }
+        
+        .r {
+            padding-left: 200px;
+            padding-top: 20px;
+            padding-right: 20px;
+            width: 100%;
+            min-width: 950px;
+        }
+        
+        .r-header ul {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .r-header ul li {
+            list-style: none;
+            float: left;
+            width: 33.3%;
+            height: 60px;
+        }
+        
+        .r-header ul li:nth-child(2) {
+            font-size: 25px;
+        }
+        
+        .r-header ul li:nth-child(3) {
+            font-size: 19px;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .l {
+                display: none;
+            }
+            .r {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+        
+        .main-conater {
+            height: 150px;
+            background-color: blue;
+            width: 100%;
+        }
+        
+        .main-conater ul {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main-conater ul li {
+            float: left;
+            list-style: none;
+            width: 25%;
+            text-align: center;
+            height: 150px;
+            padding: 20px;
+        }

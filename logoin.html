@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/mui-master/dist/css/mui.min.css">
+    <link rel="stylesheet" href="./node_modules/nprogress-master/nprogress.css">
     <link rel="stylesheet" href="./css/logo.css">
     <title>后台管理系统</title>
 </head>
@@ -34,6 +37,14 @@
     </div>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/nprogress-master/nprogress.js"></script>
+    <script>
+        NProgress.start();
+        setTimeout(function() {
+
+            NProgress.done();
+        }, 2000)
+    </script>
 </body>
 
 </html>
