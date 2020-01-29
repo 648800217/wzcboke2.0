@@ -1,11 +1,6 @@
      $(function() {
-         mui.init({
 
-
-
-
-             })
-             // 调取time
+         // 调取time
 
          var data = new Date()
          var s = data.getHours()

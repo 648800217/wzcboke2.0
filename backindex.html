@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/mui-master/dist/css/mui.min.css">
-    <link rel="stylesheet" href="./node_modules/nprogress-master/nprogress.css">
+
+    <link rel="stylesheet" href="./node_modules/nprogress/nprogress.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/backindex.css">
     <title>Document</title>
@@ -50,22 +50,22 @@
 
                 <div class="main-conater">
                     <ul class="clearfix">
-                        <li class="col-lg-3 col-md-6">
+                        <li class="col-lg-3 col-md-6 col-xs-1">
                             <span class="main-l">评论</span>
                             <span class="main-l">20kk</span>
 
                         </li>
-                        <li class="col-lg-3  col-md-6">
+                        <li class="col-lg-3 col-md-6 col-xs-1">
                             <span class="main-l">分类</span>
                             <span class="main-l">20kk</span>
 
                         </li>
-                        <li class="col-lg-3  col-md-6">
+                        <li class="col-lg-3 col-md-6 col-xs-2">
                             <span class="main-l">文章</span>
                             <span class="main-l">20kk</span>
 
                         </li>
-                        <li class="col-lg-3  col-md-6">
+                        <li class="col-lg-3 col-md-6 col-xs-8">
                             <span class="main-l">获赞</span>
                             <span class="main-l">20kk</span>
 
@@ -73,15 +73,18 @@
 
                     </ul>
                 </div>
+                <div id="main"></div>
             </div>
 
+
         </div>
+    </div>
     </div>
 
     <script src="./node_modules/echarts/dist/echarts.min.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./node_modules/nprogress-master/nprogress.js"></script>
+    <script src="./node_modules/nprogress/nprogress.js"></script>
 
     <script>
         NProgress.start();
@@ -90,96 +93,52 @@
             NProgress.done();
         }, 2000)
     </script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echat'));
+        var myChart = echarts.init(document.getElementById('main'));
 
         // 指定图表的配置项和数据
-
-
         option = {
-            legend: {},
+            color: ['#3398DB'],
             tooltip: {
                 trigger: 'axis',
-                showContent: false
-            },
-            dataset: {
-                source: [
-                    ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
-                    ['Matcha Latte', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
-                    ['Milk Tea', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
-                    ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
-                    ['Walnut Brownie', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
-                ]
-            },
-            xAxis: {
-                type: 'category'
-            },
-            yAxis: {
-                gridIndex: 0
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                }
             },
             grid: {
-                top: '55%'
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
             },
-            series: [{
-                type: 'line',
-                smooth: true,
-                seriesLayoutBy: 'row'
-            }, {
-                type: 'line',
-                smooth: true,
-                seriesLayoutBy: 'row'
-            }, {
-                type: 'line',
-                smooth: true,
-                seriesLayoutBy: 'row'
-            }, {
-                type: 'line',
-                smooth: true,
-                seriesLayoutBy: 'row'
-            }, {
-                type: 'pie',
-                id: 'pie',
-                radius: '40%',
-                center: ['50%', '25%'],
-                label: {
-                    formatter: '{b}: {@2012} ({d}%)'
-                },
-                encode: {
-                    itemName: 'product',
-                    value: '2012',
-                    tooltip: '2012'
+            xAxis: [{
+                type: 'category',
+                data: ['评论', '分类', '文章', '获赞'],
+                axisTick: {
+                    alignWithLabel: true
                 }
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                name: '直接访问',
+                type: 'bar',
+                barWidth: '60%',
+                data: [10, 52, 200, 334, 390, 330, 220]
             }]
         };
-
-        myChart.on('updateAxisPointer', function(event) {
-            var xAxisInfo = event.axesInfo[0];
-            if (xAxisInfo) {
-                var dimension = xAxisInfo.value + 1;
-                myChart.setOption({
-                    series: {
-                        id: 'pie',
-                        label: {
-                            formatter: '{b}: {@[' + dimension + ']} ({d}%)'
-                        },
-                        encode: {
-                            value: dimension,
-                            tooltip: dimension
-                        }
-                    }
-                });
-            }
-        });
-
-        myChart.setOption(option);
-
 
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
-    </script> -->
+        window.onresize = function() {
+            myChart.resize();
+            //myChart1.resize();    //若有多个图表变动，可多写
 
+        }
+    </script>
 </body>
 
 </html>
