@@ -34,13 +34,13 @@ islogoin();
                 <div class="l-mainlist">
 
                     <ul>
-                        <li><a href="./backindex.html">首页</a></li>
-                        <li><a href="./backarticle.html">文章列表</a></li>
+                        <li><a href="./backindex.php">首页</a></li>
+                        <li><a href="./backarticle.php">文章列表</a></li>
 
 
 
 
-                        <li><a href="./addarticle.html">文章添加</a></li>
+                        <li><a href="./addarticle.php">文章添加</a></li>
 
                     </ul>
                     <div class="logo-out btn btn-danger">退出登录</div>

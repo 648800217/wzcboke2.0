@@ -32,8 +32,8 @@ islogoin();
                 </div>
                 <div class="l-mainlist">
                     <ul>
-                        <li><a href="./backindex.html">首页</a></li>
-                        <li><a href="./backarticle.html">文章列表</a></li>
+                        <li><a href="./backindex.php">首页</a></li>
+                        <li><a href="./backarticle.php">文章列表</a></li>
 
 
 
@@ -61,7 +61,7 @@ islogoin();
                 <div class="main-conater">
                     <ul class="clearfix">
                         <li class="col-lg-3 col-md-6 col-xs-12">
-                            <span class="main-l">评论</span>s
+                            <span class="main-l">评论</span>
                             <span class="main-l">20kk</span>
 
                         </li>
