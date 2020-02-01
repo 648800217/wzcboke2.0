@@ -3,22 +3,16 @@ body {
     background-color: #ccc;
 }
 
-.row {
+.form {
+    /* margin: 0 auto; */
     margin-top: 20%;
+    /* text-align: center; */
 }
 
-.logo {
+.xxt {
+    border-radius: 20px;
     border: 1px solid black;
-    border-radius: 10px;
-    padding: 1.5%;
+    padding-top: 40px;
+    margin: 0 auto;
     background-color: #fff;
-}
-
-.data-text {
-    border-radius: 10px;
-    margin-top: 2% !important;
-    /* display: none; */
-    /* visibility: hidden; */
-    position: relative !important;
-    overflow: hidden;
 }
