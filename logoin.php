@@ -24,7 +24,7 @@ $msg='登录界面';
               $_SESSION['user_id'] = $res[0]['id'];
               header("location:./backindex.php");
           }else{
-            $msg='用户名或密码错误';
+            $msg='密码错误';
           }
       }
   }

@@ -20,19 +20,19 @@
         <div class="header clear">
             <div class="h-conter">
                 <div class="logo">
-                    <a href="./index.html">Wonder</a>
+                    <a href="./index1.php">Wonder</a>
                     <a class="mui-icon mui-icon-bars" id="select"></a>
                     <div class="selectdow">
                         <ul>
-                            <li><a href="./index.html">首页</a></li>
-                            <li><a href="./about.html">关于</a></li>
+                            <li><a href="./index1.php">首页</a></li>
+                            <li><a href="./about.php">关于</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="list ">
                     <ul>
-                        <li><a href="./index.html">首页</a></li>
-                        <li><a href="./about.html" class="header-h">关于</a></li>
+                        <li><a href="./index1.php">首页</a></li>
+                        <li><a href="./about.php" class="header-h">关于</a></li>
 
                     </ul>
 
@@ -87,7 +87,7 @@
     </div>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/mui-master/dist/js/mui.min.js"></script>
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
     <script src="./node_modules/nprogress/nprogress.js"></script>
 
     <script>

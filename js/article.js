@@ -104,5 +104,50 @@
     }
     loadData();
     tcScroll();
+    // 发送ajax请求--------------------------
 
+    var id = $('.conter').data('id');
+    $.ajax({
+        type: 'get',
+        url: './joggle/article.php',
+        dataType: 'json',
+        data: {
+            id: id
+        },
+        success: function(data) {
+            console.log(data);
+            var html = template('tpl', { data: data });
+            $('.main-l').html(html);
+
+
+
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            // 状态码
+            console.log(XMLHttpRequest.status);
+            // 状态
+            console.log(XMLHttpRequest.readyState);
+            // 错误信息   
+            console.log(textStatus);
+        }
+
+    });
+
+    $('.main').on('click', '.conten-ok', function() {
+        $.ajax({
+            type: 'get',
+            url: './joggle/love.php',
+            data: {
+                id: id
+            },
+            success: function(data) {
+                console.log(data)
+
+            }
+
+        })
+
+        console.log('111')
+
+    })
 });

@@ -1,3 +1,29 @@
+<?php
+    include_once "./fu.php";
+    // 文章
+    $sql="SELECT COUNT(*) as cont FROM comments";
+    $comments= myc($sql);
+    // 获赞
+    $sql="SELECT love FROM love WHERE id=1";
+    $love= myc($sql);
+    
+    $sql="SELECT COUNT(*) as cont FROM comments";
+    $comments= myc($sql);
+    // 分类
+    $sql="SELECT COUNT(*) as cont FROM categories";
+    $categories= myc($sql);
+    // 评论
+    $sql="SELECT COUNT(*) as cont FROM talk";
+    $talk= myc($sql);
+   
+// $sql="SELECT *  FROM comments";
+//     $comments= myc($sql);
+
+// print_r($love[0]['love']);
+$id=$_GET['id'];
+// echo $id;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,23 +42,23 @@
 
 <body>
 
-    <div class="conter">
+    <div class="conter" data-id='<?php echo $id ?>'>
         <div class="header clear">
             <div class="h-conter">
                 <div class="logo">
-                    <a href="./index.html">Wonder</a>
+                    <a href="./index1.php">Wonder</a>
                     <a class="mui-icon mui-icon-bars" id="select"></a>
                     <div class="selectdow">
                         <ul>
-                            <li><a href="./index.html">首页</a></li>
-                            <li><a href="./about.html">关于</a></li>
+                            <li><a href="./index1.php">首页</a></li>
+                            <li><a href="./about.php">关于</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="list ">
                     <ul>
-                        <li><a href="./index.html" class="header-h check">首页</a></li>
-                        <li><a href="./about.html">关于</a></li>
+                        <li><a href="./index1.php" class="header-h check">首页</a></li>
+                        <li><a href="./about.php">关于</a></li>
 
                     </ul>
 
@@ -60,18 +86,23 @@
 
                 </div>
                 <div class="new-r">
-                    <div class="wzcid">
-                        <p>文章分类</p>
+                <div class="wzcid">
+                        <p>文章总览</p>
                     </div>
                     <div class="categ">
-                        <a href="">
-                            <p>生活 &nbsp<span>(2)</span></p>
+                        <a href="./backindex.php">
+                            <p>文章 &nbsp<span>(<?php echo $comments[0]['cont']?>)</span></p>
                         </a>
-                        <a href="">
-                            <p>评论 &nbsp<span>(2)</span></p>
+                        <a href="./backindex.php">
+                            <p>评论 &nbsp<span>(<?php echo $talk[0]['cont']?>)</span></p>
                         </a>
-                        <p>点赞 &nbsp<span>(2)</span></p>
-                        <a href=""></a>
+                        
+                        <a href="./backindex.php">
+                            <p>分类 &nbsp<span>(<?php echo $categories[0]['cont']?>)</span></p>
+                        </a>
+                        <a href="./backindex.php">
+                            <p>获赞 &nbsp<span>(<?php echo $love[0]['love']?>)</span></p>
+                        </a>
 
                     </div>
                 </div>
@@ -100,14 +131,15 @@
 
             </div>
             <div class="main-l">
-                <div class="new-l">
+                <!-- 挖个坑-------------------------------------- -->
+                <!-- <div class="new-l">
 
 
                     <h3>这是标题</h3>
                     <div class="actor">
                         <span>作者:  <span>王之川  </span></span>
                         <span>更新时间:<span>2019-1-2  13:26:36</span></span>
-                        <span class="call"><span>访问次数 <span>66</span>次</p>
+                        
                         </span>
                     </div>
                     <div class="content">
@@ -138,7 +170,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
 
 
 
@@ -149,18 +181,54 @@
 
     </div>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/mui-master/dist/js/mui.js"></script>
+        <script src="./node_modules/nprogress/nprogress.js"></script>
+        <script src="./node_modules/mui-master/dist/js/mui.js"></script>
+        <script src="./node_modules/art-template-master/lib/template-web.js"></script>
+        <!-- <script src="./js/index.js"></script>> -->
+       <script src="./js/article.js"></script>
 
-    <script src="./js/index.js"></script>
-    <script src="./node_modules/nprogress/nprogress.js"></script>
     <script>
-        NProgress.start();
-        setTimeout(function() {
+         $(document).ajaxStart(function() {
+             NProgress.start();
+         });
+         $(document).ajaxStop(function() {
+             NProgress.done();
+         });
+        </script>
 
-            NProgress.done();
-        }, 2000)
-    </script>
+   <script type='text/html' id='tpl'>
+       {{each data v i}}
+       <div class="new-l">
 
+
+    <h3>{{v.title}}</h3>
+    <div class="actor">
+    <span>作者:  <span>{{v.author}} </span></span>
+    <span>更新时间:<span>{{v.time}}</span></span>
+    
+    </span>
+</div>
+<div class="content">
+    <div class="img">
+        <img src="./uploads/wallpaper-2572384.jpg" alt="图片">
+    </div>
+
+    <div class="content-m">
+        {{v.content}}
+    </div>
+
+    
+   
+  
+    <div class="ok-conter">
+        <div class="conten-ok"><a href="">我觉得不错 <span>{{v.love}}</span></a></div>
+        <div class="goback"><a href="./index1.php">返回首页</a></div>
+    </div>
+</div>
+
+</div>
+{{/each}}
+   </script>
 
 
 

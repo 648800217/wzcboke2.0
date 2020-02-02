@@ -1,4 +1,5 @@
      $(function() {
+         //  console.log('111')
 
          // 调取time
 
@@ -97,9 +98,26 @@
                  $('.header').stop().fadeIn(200)
 
              }
+
          });
+         //  发送请求------------------------------------
+         $.ajax({
+             url: './joggle/comments.php',
+             dataType: 'json',
+             success: function(data) {
+                 console.log(data)
+                 var html = template('tpl', {
+                     data: data
+                 });
+                 $('.main-l').html(html);
+
+             }
+         });
+         //  其实可以在跳转时携带id-----------------------------
+         //  $('.main-l').on('click', 'h3', function() {
+         //      var a = $(this).data("id");
+         //      console.log(a);
+         //  })
 
 
-
-
-     })
+     });
