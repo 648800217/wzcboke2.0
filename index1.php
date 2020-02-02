@@ -99,9 +99,7 @@
                             <a href="./backindex.php">
                                 <p>分类 &nbsp<span>(<?php echo $categories[0]['cont']?>)</span></p>
                             </a>
-                            <a href="./backindex.php">
-                                <p>获赞 &nbsp<span>(<?php echo $love[0]['love']?>)</span></p>
-                            </a>
+                           
 
                         </div>
                     </div>

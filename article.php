@@ -100,9 +100,7 @@ $id=$_GET['id'];
                         <a href="./backindex.php">
                             <p>分类 &nbsp<span>(<?php echo $categories[0]['cont']?>)</span></p>
                         </a>
-                        <a href="./backindex.php">
-                            <p>获赞 &nbsp<span>(<?php echo $love[0]['love']?>)</span></p>
-                        </a>
+                        
 
                     </div>
                 </div>
@@ -184,7 +182,7 @@ $id=$_GET['id'];
         <script src="./node_modules/nprogress/nprogress.js"></script>
         <script src="./node_modules/mui-master/dist/js/mui.js"></script>
         <script src="./node_modules/art-template-master/lib/template-web.js"></script>
-        <!-- <script src="./js/index.js"></script>> -->
+        <script src="./js/index.js"></script>>
        <script src="./js/article.js"></script>
 
     <script>
