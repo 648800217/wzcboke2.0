@@ -7,7 +7,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-paginator": "^1.0.2",
     "echarts": "^4.6.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery.pagination": "^0.1.5",
     "mui": "0.0.1",
     "npm": "^6.13.7",
